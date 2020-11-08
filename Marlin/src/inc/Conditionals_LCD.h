@@ -528,7 +528,7 @@
     #define E_STEPPERS    1
   #endif
   #if DISABLED(SWITCHING_NOZZLE)
-    #define HOTENDS       E_STEPPERS
+    //#define HOTENDS       E_STEPPERS
   #endif
 #elif ENABLED(MIXING_EXTRUDER)
   #define E_STEPPERS      MIXING_STEPPERS
@@ -675,10 +675,6 @@
   #define HAS_BED_PROBE 1
 #endif
 
-#if EITHER(MESH_BED_LEVELING, AUTO_BED_LEVELING_UBL)
-  #undef PROBE_MANUALLY
-#endif
-
 #if ANY(HAS_BED_PROBE, PROBE_MANUALLY, MESH_BED_LEVELING)
   #define PROBE_SELECTED 1
 #endif
@@ -751,7 +747,6 @@
   #define HAS_PROBING_PROCEDURE 1
 #endif
 #if !HAS_LEVELING
-  #undef PROBE_MANUALLY
   #undef RESTORE_LEVELING_AFTER_G28
 #endif
 
