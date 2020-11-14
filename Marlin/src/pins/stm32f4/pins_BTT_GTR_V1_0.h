@@ -44,9 +44,6 @@
   #define SERVO0_PIN                        PB11
 #endif
 
-#define SERVO1_PIN                          PI8    // SWITCHING EXTRUDER E0,E1
-#define SERVO2_PIN                          PI10   // SWITCHING EXTRUDER E2,E3
-
 #define PS_ON_PIN                           PH6
 
 //
@@ -60,7 +57,7 @@
 #define Z_MAX_PIN                           PD3
 
 //
-// Pins on the extender M5
+// Pins on the extender
 //
 //#define X_MIN_PIN                         PI4
 //#define X2_MIN_PIN                        PF12
@@ -110,14 +107,12 @@
   #define E1_CS_PIN                         PD4
 #endif
 
-#define X2_STEP_PIN                         PD1      // E2 connector on the board
-#define X2_DIR_PIN                          PD0      // E2 connector on the board
-#define X2_ENABLE_PIN                       PD2      // E2 connector on the board
-#ifndef X2_CS_PIN
-  #define X2_CS_PIN                         PC12     // E2 connector on the board
+#define E2_STEP_PIN                         PD1
+#define E2_DIR_PIN                          PD0
+#define E2_ENABLE_PIN                       PD2
+#ifndef E2_CS_PIN
+  #define E2_CS_PIN                         PC12
 #endif
-
-// Pins on the extender M5
 
 #define E3_STEP_PIN                         PF3
 #define E3_DIR_PIN                          PG3
